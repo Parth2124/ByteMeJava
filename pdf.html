@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardCore-Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(45deg, #6a0572, #a603a5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            margin: 20px 0; /* Ensure spacing from top */
+            animation: disco-bulb 5s infinite;
+        }
+
+        @keyframes disco-bulb {
+            0% {
+                text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            }
+            50% {
+                text-shadow: 0 0 20px #ff007f, 0 0 40px #ff4500, 0 0 60px #ffffff;
+            }
+            100% {
+                text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #a603a5;
+        }
+
+
+        .search-container {
+            position: fixed;
+            bottom: 20px; /* Fixed at the bottom of the screen */
+            left: 50%;
+            transform: translateX(-50%); /* Center the search bar */
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10; /* Ensure it stays on top of other elements */
+        }
+        
+        .search-container input {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            width: 190px; /* Make the input field more consistent */
+        }
+        
+        .pdf-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding-bottom: 100px; /* Space for fixed search bar */
+        }
+
+        .pdf-box {
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pdf-box h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .pdf-box a {
+            display: inline-block;
+            padding: 10px;
+            font-size: 1rem;
+            text-decoration: none;
+            background-color: #021017;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pdf-box a:hover {
+            background-color: #a603a5;
+        }
+        
+
+        @media screen and (max-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .pdf-box {
+                flex: 1 1 calc(50% - 20px); /* 2 PDFs per row on medium screens */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .pdf-box {
+                flex: 1 1 100%; /* 1 PDF per row on small screens */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Hardcore Java</h1>
+        <div class="navbar">
+            <!-- <a href="pdf.html">PDFs</a> -->
+            <!-- <a href="#courses">Courses</a> -->
+            <a href="main.html">Home</a>
+        </div>
+    </center>
+    <br><br>
+    <div class="pdf-container">
+        <div class="pdf-box">
+            <h3>Java Basics PDF</h3>
+            <a href="PDFs/Java_Basics_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Advanced Java Concepts PDF</h3>
+            <a href="PDFs/Advanced_java_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Java OOPs Concepts PDF</h3>
+            <a href="PDFs/OOPS_Concepts_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Java Data Structures PDF</h3>
+            <a href="PDFs/DataStructuresAlgorithms_Java_ByteMeJava .pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Java Multithreading PDF</h3>
+            <a href="PDFs/Java_Multithreading_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Java Star Patterns PDF</h3>
+            <a href="PDFs/Patterns_Java_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Head First Java 2nd Edition -Java Book</h3>
+            <a href="PDFs/Head_First_Java_Second_Edition_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+        <div class="pdf-box">
+            <h3>Effective Java(Addison-Wesley) -Java Book</h3>
+            <a href="PDFs/Effective Java (2017, Addison-Wesley)_ByteMeJava.pdf" target="_blank">Strip It Down</a>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <label for="search-bar">Compile Here: </label>
+        <input type="text" id="search-bar" placeholder="Search PDFs..." oninput="filterVideos()">
+    </div>
+
+    <script>
+        function filterVideos() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const videos = document.querySelectorAll('.pdf-box');
+
+            videos.forEach(video => {
+                const title = video.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

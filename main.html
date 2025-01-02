@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardCore-Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(45deg, #6a0572, #a603a5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            margin: 20px 0; /* Ensure spacing from top */
+            animation: disco-bulb 5s infinite;
+        }
+
+        @keyframes disco-bulb {
+            0% {
+                text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            }
+            50% {
+                text-shadow: 0 0 20px #ff007f, 0 0 40px #ff4500, 0 0 60px #ffffff;
+            }
+            100% {
+                text-shadow: 0 0 10px #6a0572, 0 0 20px #a603a5;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            
+            width: 90%;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #a603a5;
+        }
+
+        .search-container {
+            position: fixed;
+            bottom: 20px; /* Fixed at the bottom of the screen */
+            left: 50%;
+            transform: translateX(-50%); /* Center the search bar */
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10; /* Ensure it stays on top of other elements */
+        }
+        
+        .search-container input {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            width: 190px; /* Make the input field more consistent */
+        }
+        
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding-bottom: 100px; /* Space for fixed search bar */
+        }
+
+        .video-box {
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .video-box h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        @media screen and (max-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .video-box {
+                flex: 1 1 calc(50% - 20px); /* 2 videos per row on medium screens */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .video-box {
+                flex: 1 1 100%; /* 1 video per row on small screens */
+                max-width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Hardcore Java</h1>
+
+        <div class="navbar">
+            <a href="pdf.html">PDFs</a>
+            <a href="index.html">Exit</a>
+            <!-- <a href="compiler.html">IDE</a> -->
+        </div>
+    </center>
+    <br><br>
+    <div class="video-container">
+        <div class="video-box">
+            <h3>Data Types & Variables</h3>
+            <iframe src="https://www.youtube.com/embed/LusTv0RlnSU?si=Hc-T915pfFLXTyKY"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Control Statements</h3>
+            <iframe src="https://www.youtube.com/embed/I5srDu75h_M?si=4Qgh0h6ZgH6OgmwR" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Arrays</h3>
+            <iframe src="https://www.youtube.com/embed/NTHVTY6w2Co?si=hBt9F6AoNPukZMhN" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>ArrayList</h3>
+            <iframe src="https://www.youtube.com/embed/liFyhzZl9uw?si=YHcEIZ1Zm94Bw2PZ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Strings</h3>
+            <iframe src="https://www.youtube.com/embed/vCRD36bG8xQ?si=R-rpdmvlQmmhPwv5" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>String Builder</h3>
+            <iframe src="https://www.youtube.com/embed/ZLDwskEhIFg?si=tZqTWORRJlBC4qBP" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    
+        <div class="video-container">
+        <div class="video-box">
+            <h3>Classes & Objects</h3>
+            <iframe src="https://www.youtube.com/embed/BSVKUk58K6U?si=ex8UXLjTRvGn4Y3z" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Packages & Singlton Classes</h3>
+            <iframe src="https://www.youtube.com/embed/_Ya6CN13t8k?si=UjLhwsaam7xc8JwI" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>OOPs(4)</h3>
+            <iframe src="https://www.youtube.com/embed/46T2wD3IuhM?si=q6LQxZ_RIf7QPV1a" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <!-- Add more videos as needed -->
+    </div>
+    
+        <div class="video-container">
+        <div class="video-box">
+            <h3>Exception Handling</h3>
+            <iframe src="https://www.youtube.com/embed/ClaFxuHMOSo?si=0MXWTWW69GPLwUun" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Multi-Threading Core</h3>
+            <iframe src="https://www.youtube.com/embed/WldMTtUWqTg?si=r-nw-5uwmRZqp0y2" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Collection Framework (Java-8)</h3>
+            <iframe src="https://www.youtube.com/embed/9ogGan-R1pc?si=ZjtNlLQYpue6FLcQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <!-- Add more videos as needed -->
+    </div>
+    
+        <div class="video-container">
+        
+            <div class="video-box">
+                <h3>Generics (Java-8)</h3>
+                <iframe src="https://www.youtube.com/embed/OY2lPr8h93U?si=PFDeXQyNvBET-yK1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            </div>
+        <div class="video-box">
+            <h3>File Handling</h3>
+            <iframe src="https://www.youtube.com/embed/b35mlSPOlJg?si=r1NwdKkGwRq96n52" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <h3>Wrapper Classes</h3>
+            <iframe src="https://www.youtube.com/embed/suBZpy8Z2VY?si=bPraKO2wWbVlcH7j"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+        <!-- Add more videos as needed -->
+    </div>
+    
+        <div class="video-container">
+        
+            <div class="video-box">
+                <h3>Memory Management</h3>
+                <iframe src="https://www.youtube.com/embed/_GK3WoFFKUE?si=Oq9rSnZeiiPCzvl3"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="video-box">
+                <h3>Data Structures & Algorithms - DSA Java</h3>
+                <iframe src="https://www.youtube.com/embed/videoseries?si=oHH7wfraIthmwz3l&amp;list=PLfc1-isKPs7ID3nuYbLZEFjCNQVkmuJPA" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            </div>
+
+
+            <div class="video-box">
+                <h3>HUB FOR YOU!</h3> <br>
+                <p>More Videos will be added here!</p>
+            </div>
+
+
+        <!-- <div class="video-box">
+            <h3>Wrapper Classes</h3>
+            <iframe src="https://www.youtube.com/embed/suBZpy8Z2VY?si=bPraKO2wWbVlcH7j"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>  -->
+        <!-- Add more videos as needed -->
+    </div>
+
+
+    <div class="search-container">
+        <label for="search-bar">Compile Here: </label>
+        <input type="text" id="search-bar" placeholder="Search videos..." oninput="filterVideos()">
+    </div>
+
+    <script>
+        function filterVideos() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const videos = document.querySelectorAll('.video-box');
+
+            videos.forEach(video => {
+                const title = video.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
